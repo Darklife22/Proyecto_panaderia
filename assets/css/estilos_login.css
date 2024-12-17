@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('http://localhost/panaderia/assets/img/fondo_login.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Blanco semitransparente */
+    z-index: 1;
+}
+
+/* Contenedor principal */
+.container-fluid {
+    position: relative;
+    z-index: 2;
+}
+
+/* Imágenes decorativas */
+.panes-decorativos img {
+    position: absolute;
+    width: 10vw; /* Ajusta el tamaño de las imágenes en función del ancho de la ventana */
+    max-width: 200px; /* Limita el tamaño máximo para evitar que se hagan demasiado grandes */
+    opacity: 1; /* Asegura que las imágenes no sean transparentes */
+    z-index: 3; /* Asegura que las imágenes estén encima del fondo semitransparente */
+}
+
+/* Ocultar las imágenes en pantallas pequeñas */
+@media (max-width: 768px) {
+    .panes-decorativos img {
+        display: none;
+    }
+}
+
+/* Posicionamiento de las imágenes */
+.panes-decorativos .pan1 {
+    top: 10%;
+    left: 5%;
+}
+
+.panes-decorativos .pan2 {
+    top: 10%;
+    right: 10%;
+}
+
+.panes-decorativos .pan3 {
+    bottom: 5%;
+    left: 10%;
+}
+
+.panes-decorativos .pan4 {
+    bottom: 15%;
+    right: 15%;
+}
+
+/* Estilos para el cuadro de login */
+.login-container {
+    background-color: #FFAF5A; /* Fondo naranja */
+    padding: 30px;
+    width: 500px;
+    border-radius: 25px; /* Esquinas redondeadas */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Sombra negra más intensa */
+    text-align: center;
+}
+
+/* Logo de la panadería */
+.logo {
+    width: 200px; /* Ajusta el tamaño del logo según sea necesario */
+    margin-bottom: 20px;
+}
+
+/* Títulos y texto */
+h1 {
+    color: white; /* Color blanco para el título */
+}
+
+/* Formulario de inicio de sesión */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Asegura que las etiquetas estén alineadas a la izquierda */
+.form-label {
+    display: block; /* Coloca las etiquetas en una nueva línea */
+    text-align: left; /* Alineación a la izquierda */
+    font-weight: bold; /* Negrita para mayor claridad */
+    margin-bottom: 5px; /* Espacio entre el texto y el campo */
+    color: #494949;
+}
+
+/* Ajusta los campos de entrada */
+.form-control {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Borde gris claro */
+}
+
+/* Placeholder personalizado */
+.form-control::placeholder {
+    color: #aaa; /* Color gris claro */
+     /* Texto en cursiva */
+}
+
+/* Input y botones */
+input, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input {
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    background-color: #ff4500; /* Color naranja oscuro para el botón */
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff3300; /* Color naranja aún más oscuro al hacer hover */
+}
+
+.btn-login {
+    background-color: #ff6600;
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: #ff3300;
+}
